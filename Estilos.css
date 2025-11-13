@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+}
+/*Barra de busqueda (NavBar)*/
+.navbar{
+    background-color: #2b2f33;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+}
+/*Apartado de logo*/
+.navbar .logo{
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+/*Contenedor de enlaces*/
+.navbar .navlinks{
+    display: flex;
+    gap: 30px;
+}
+.navbar .navlinks a{
+    color: #c0c0c0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.25;
+    align-items:first baseline;
+}
+.navbar .navlinks a:hover{
+    color: white;
+}
+/*Seccion de busqueda*/
+.navbar .search_container{
+    display: flex;
+    align-items: center;
+    background-color: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.navbar input[type = "text"]{
+    background: transparent;
+    border: none;
+    color: #ddd;
+    padding: 6px 10px;
+    outline: none;
+    width: 150px;
+}
+.navbar button{
+    background-color: transparent;
+    border: none;
+    color: #34c759;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.35;
+}
+.navbar button:hover{
+    background-color: #34c75922;
+}
+/*apartado emergente*/
+/*Estilo base*/
+.drop{
+    position: relative;
+    display: inline-block;
+}
+.drop_btn{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.drop_btn:hover{
+    background-color: #0056b3;
+}
+/*Lista de temas (oculta por defecto)*/
+.drop_mn{
+    display: none;
+    position: absolute;
+    background-color: rgb(56, 77, 63);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px hwb(0 8% 91% / 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/*Mostrar el drop al paso de mouse*/
+.drop:hover .drop_mn{
+    display: block;
+}
+.drop_mn li a{
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.drop_mn li a:hover{
+    background-color: #00c44e;
+}
+.drop_div{
+    height: 1px;
+    margin: 5px 0;
+    background-color: #00c850;
+}
+.texto{
+    color: white;
+}
+/*resumen inteligente*/
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 95%;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+/*Galeria*/
+.galery{
+    display: flex;
+    width: 500px;
+    height: 490px;
+}
+.galery img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: .7s ease;
+}
+.galery img:hover{
+    width: 500px;
+    opacity: 1;
+    filter: brightness(30%);
+}
